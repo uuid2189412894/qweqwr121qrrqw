@@ -1,0 +1,101 @@
+/* Reset browser default margins */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for the video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Video styling to cover the entire background */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Menu styling */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.menu h1 
+{
+    background-color:#000;
+}
+
+#story-text 
+{
+    background-color:#000;
+}
+
+
+
+/* Fade-in and fade-out animation */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#initial-text {
+    animation: fadeInOut 5s ease-in-out forwards;
+}
+
+/* Command button styling */
+#command-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    opacity: 0;
+    animation: fadeInButton 8s ease-in-out forwards;
+}
+
+/* Button hover effect */
+#command-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Fade-in animation for button */
+@keyframes fadeInButton {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Hidden initially */
+.hidden {
+    opacity: 0;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+    .menu h1, .menu p, #command-button {
+        font-size: 1.2em;
+        padding: 20px;
+    }
+}

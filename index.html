@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Agent Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="THEISLAND.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="menu">
+        <h1 id="initial-text">THE AGENT... HAS BEEN ACTIVATED.</h1>
+        <button id="command-button" class="hidden">Begin Initiation.</button>
+        <p id="story-text" class="hidden"></p>
+        <audio id="background-music" src="song.mp3" type="audio/mp3"></audio>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
